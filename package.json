@@ -1,0 +1,22 @@
+{
+  "name": "ci-cd-repo",
+  "version": "1.0.0",
+  "description": "simple hello world web app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacobT708/CI-CD-Repo.git"
+  },
+  "author": "Jacob T",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JacobT708/CI-CD-Repo/issues"
+  },
+  "homepage": "https://github.com/JacobT708/CI-CD-Repo#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
