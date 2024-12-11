@@ -21,9 +21,4 @@ phases:
 
 artifacts:
   files:
-    - app.zip # Define the artifact to upload
-secondary-artifacts:
-  logs:
-    files:
-      - '**/*.log' # Upload log files as a secondary artifact
-    name: BuildLogs
+    - '**/*' # Define the artifact to upload
