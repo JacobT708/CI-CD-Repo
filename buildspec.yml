@@ -1,25 +1,29 @@
 version: 0.2
+
 phases:
   install:
     commands:
       - echo "Updating packages and installing Node.js"
-      - yum update -y # Remove 'sudo'
+      - yum update -y
       - curl -sL https://rpm.nodesource.com/setup_22.x | bash -
       - yum install -y nodejs # Install Node.js
       - node -v # Verify Node.js installation
       - npm -v # Verify npm installation
       - echo "Installing application dependencies"
       - npm install # Install dependencies
-      - node -e "console.log('Running Node.js ' + process.version)"
   build:
     commands:
       - echo "Packaging application"
       - zip -r app.zip . # Package the application
-    post_build:
-      commands:
-        - echo "Uploading packaged application to S3"
-        - aws s3 cp app.zip s3://ci-cd-lab-bucket/
-        - echo "Build completed and uploaded to S3"
+  post_build:
+    commands:
+      - echo "Build completed. Ready to upload artifacts."
+
 artifacts:
   files:
-    - app.zip
+    - app.zip # Define the artifact to upload
+secondary-artifacts:
+  logs:
+    files:
+      - '**/*.log' # Upload log files as a secondary artifact
+    name: BuildLogs
