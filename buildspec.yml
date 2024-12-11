@@ -1,21 +1,22 @@
 version: 0.2
-
 phases:
   install:
-    runtime-versions:
-      nodejs: 22.12.0
     commands:
-      - echo Installing dependencies
+      - echo "Installing Node.js"
+      - nvm install node
+      - node -v
+  pre_build:
+    commands:
+      - echo "Installing dependencies"
       - npm install
   build:
     commands:
-      - echo Build phase: Packaging the application
-      - zip -r app.zip . # Create a zip of the app
+      - echo "Running tests"
+      - npm test
   post_build:
     commands:
-      - echo Post-build phase: Uploading artifact to S3
-      - aws s3 cp app.zip s3://ci-cd-lab-bucket/
-
+      - echo "Packaging application"
+      - npm run build
 artifacts:
   files:
-    - app.zip
+    - '**/*'
