@@ -1,0 +1,14 @@
+{
+  "name": "ci-cd-repo",
+  "version": "1.0.0",
+  "description": "Repository for CI/CD Pipeline for AWS DevOps Project\r Hosting a static web app for testing purposes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
