@@ -11,16 +11,6 @@ phases:
       - echo "Installing application dependencies"
       - npm install # Install dependencies
       - node -e "console.log('Running Node.js ' + process.version)"
-      - echo "Installing Codedeploy agent"
-      - yum update
-      - yum install ruby
-      - yum install wget
-      - cd /home/ec2-user
-      - wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install
-      - chmod +x ./install
-      - ./install auto
-      - systemctl start codedeploy-agent
-      - npm install
   build:
     commands:
       - echo "Packaging application"
