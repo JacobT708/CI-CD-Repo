@@ -2,9 +2,10 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Installing Node.js"
+      - echo "Updating packages and installing Node.js"
+      - yum update -y # Remove 'sudo'
       - curl -sL https://rpm.nodesource.com/setup_22.x | bash -
-      - yum install -y nodejs
+      - yum install -y nodejs # Install Node.js
       - node -v # Verify Node.js installation
       - npm -v # Verify npm installation
       - echo "Installing application dependencies"
