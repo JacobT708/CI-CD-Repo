@@ -20,6 +20,8 @@ phases:
       - echo "Build completed. Ready to upload artifacts."
 
 artifacts:
+  primary-artifacts:
+    files: '**/*'
   secondary-artifacts:
     webapp:
       files:
