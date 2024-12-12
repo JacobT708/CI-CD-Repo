@@ -18,13 +18,3 @@ phases:
   post_build:
     commands:
       - echo "Build completed. Ready to upload artifacts."
-
-artifacts:
-  files:
-    - app.zip
-  name: my-app
-  secondary-artifacts:
-    webapp:
-        files:
-          - '**/*'
-        name: webapp
