@@ -24,7 +24,7 @@ artifacts:
     - app.zip
   name: my-app
   secondary-artifacts:
-    - webapp:
+    webapp:
         files:
-          - '**/*' # This might need adjustment based on your actual files
+          - '**/*'
         name: webapp
