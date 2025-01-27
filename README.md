@@ -15,3 +15,4 @@ Tools and Technologies
     S3 for artifact storage
     EC2 for hosting
 
+![Architecture](https://github.com/user-attachments/assets/8cf7b2d2-4a93-43cb-afc7-6aa94077d574)
