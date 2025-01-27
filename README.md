@@ -15,10 +15,3 @@ Tools and Technologies
     S3 for artifact storage
     EC2 for hosting
 
-Getting Started
-
-    Clone the repository and push to your GitHub account.
-    Deploy the CloudFormation template to set up the pipeline.
-    Push code changes to automatically trigger the pipeline.
-
-Feel free to explore and use this project as a guide for building scalable CI/CD pipelines!
